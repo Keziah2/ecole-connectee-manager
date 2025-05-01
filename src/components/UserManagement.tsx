@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -14,7 +13,6 @@ import {
   Dialog,
   DialogContent,
   DialogDescription,
-  DialogFooter,
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog";
@@ -31,7 +29,7 @@ interface User {
   name: string;
   email: string;
   role: UserRole;
-  status: "active" | "inactive";
+  status: "active" | "inactive"; // Ensure this is strictly typed
   lastLogin?: string;
 }
 
@@ -42,7 +40,7 @@ const UserManagement = () => {
   const [isEditUserOpen, setIsEditUserOpen] = useState(false);
   const [currentUser, setCurrentUser] = useState<User | null>(null);
 
-  // Données de démonstration pour les utilisateurs
+  // Données de démonstration pour les utilisateurs avec le statut correctement typé
   const [users, setUsers] = useState<User[]>([
     {
       id: "1",
