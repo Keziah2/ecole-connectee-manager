@@ -1,14 +1,19 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+
+import React, { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import DashboardPage from "./DashboardPage";
 
 const Index = () => {
-  return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-gray-600">Start building your amazing project here!</p>
-      </div>
-    </div>
-  );
+  const navigate = useNavigate();
+  
+  // Pour la démo, on redirige vers la page de connexion
+  // Dans une implémentation réelle, on vérifierait si l'utilisateur est connecté
+  useEffect(() => {
+    // Uncomment this to test login flow
+    // navigate("/login");
+  }, [navigate]);
+
+  return <DashboardPage />;
 };
 
 export default Index;
