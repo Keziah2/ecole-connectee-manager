@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -150,7 +151,7 @@ const UserManagement = () => {
       user.id === userId
         ? {
             ...user,
-            status: user.status === "active" ? "inactive" : "active",
+            status: user.status === "active" ? "inactive" as const : "active" as const,
           }
         : user
     );
@@ -307,3 +308,4 @@ const UserManagement = () => {
 };
 
 export default UserManagement;
+
