@@ -59,6 +59,12 @@ const Sidebar = ({ collapsed = false, onToggleCollapse }: SidebarProps) => {
           />
           <SidebarItem
             icon={Users}
+            title="Utilisateurs"
+            collapsed={collapsed}
+            onClick={() => handleNavigation("/users")}
+          />
+          <SidebarItem
+            icon={Users}
             title="Élèves"
             collapsed={collapsed}
             onClick={() => handleNavigation("/students")}
