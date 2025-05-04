@@ -12,6 +12,7 @@ import {
   BookOpen,
   Calendar,
   Bell,
+  UserCog,
 } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
@@ -76,6 +77,12 @@ const Sidebar = ({ collapsed = false, onToggleCollapse }: SidebarProps) => {
             onClick={() => handleNavigation("/teachers")}
           />
           <SidebarItem
+            icon={Users}
+            title="Parents"
+            collapsed={collapsed}
+            onClick={() => handleNavigation("/parents")}
+          />
+          <SidebarItem
             icon={BookOpen}
             title="Classes"
             collapsed={collapsed}
@@ -104,6 +111,12 @@ const Sidebar = ({ collapsed = false, onToggleCollapse }: SidebarProps) => {
 
       <div className="p-4 border-t border-sidebar-border">
         <nav className="space-y-1">
+          <SidebarItem
+            icon={UserCog}
+            title="Profil"
+            collapsed={collapsed}
+            onClick={() => handleNavigation("/profile")}
+          />
           <SidebarItem
             icon={Settings}
             title="Paramètres"
